@@ -410,6 +410,10 @@ responsive 768
         -webkit-background-clip: text;
     }
 
+    .main_slider .itm {
+        height: 300px;
+    }
+
     .main_slider strong {
         display: block;
         margin: 0 0 20px 0;
