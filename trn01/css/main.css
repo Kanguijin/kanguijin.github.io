@@ -400,6 +400,10 @@ responsive 768
         text-align: center;
     }
 
+    .main_slider .itm {
+        height: 300px;
+    }
+
     .main_slider h3 {
         font-size: 11vw;
         font-weight: 900;
@@ -410,9 +414,7 @@ responsive 768
         -webkit-background-clip: text;
     }
 
-    .main_slider .itm {
-        height: 300px;
-    }
+
 
     .main_slider strong {
         display: block;
