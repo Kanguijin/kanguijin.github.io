@@ -187,10 +187,9 @@
             $(this).parent().hide();
         })
         $('.top_banner button').on('click', function () {
-            $('.top_banner .container').slideUp();
+            $('.top_banner .container').slideToggle();
             $(this).toggleClass('on');
         })
-
         $('.side_banner button').on('click', function(){
             $(this).parent().toggleClass('on'); 
         })
