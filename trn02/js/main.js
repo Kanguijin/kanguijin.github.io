@@ -22,12 +22,12 @@ $(function () {
     });
 
     $('#myMovie').YTPlayer({
-        videoURL: 'https://youtu.be/Qwsh9eZDLyc',
+        videoURL: 'https://youtu.be/18OYMT2qUSY',
         containment: '.youtube',
         autoPlay: true,
-        mute: true, 
-        startAt: 0, 
-        opacity: 1, 
+        mute: true,
+        startAt: 0,
+        opacity: 1,
         showControls: false,
         playOnlyIfVisible: true
     });
