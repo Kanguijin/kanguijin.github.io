@@ -1,9 +1,8 @@
 $(function () {
-
-    /////////////////////////////////////
+    //////////////////////////////////////////////////
 
     $('.top_banner i').on('click', function () {
-        $('.top_banner').slideUp(500);
+        $('.top_banner').slideUp();
     });
 
     $('.main_slider').on('init reInit afterChange', function (e, s, c) {
@@ -16,6 +15,7 @@ $(function () {
         )
     })
 
+
     $('.main_slider').slick({
         arrows: false,
         dots: true,
@@ -24,9 +24,17 @@ $(function () {
         pauseOnFocus: false,
     });
 
+    $('.movie .dec i:nth-of-type(1)').on('click', function () {
+        $('.movie video').trigger('play');
+    });
+
+    $('.movie .dec i:nth-of-type(2)').on('click', function () {
+        $('.movie video').trigger('pause');
+    });
+
     $('#myMovie').YTPlayer({
-        videoURL: 'https://youtu.be/18OYMT2qUSY',
-        containment: '.youtube',
+        videoURL: 'G7dUt84Fd_w',
+        containment: '.utube',
         autoPlay: true,
         mute: true,
         startAt: 0,
@@ -35,42 +43,13 @@ $(function () {
         playOnlyIfVisible: true
     });
 
-    $('.movie .dec i:nth-of-type(1)').on('click', function () {
-        $('.movie video').trigger('play');
-    })
-    $('.movie .dec i:nth-of-type(2)').on('click', function () {
-        $('.movie video').trigger('pause');
-    })
-
-
-    $('.youtube i:nth-of-type(1)').on('click', function () {
+    $('.utube i:nth-of-type(1)').on('click', function () {
         $('#myMovie').YTPPlay();
-    })
-    $('.youtube i:nth-of-type(2)').on('click', function () {
+    });
+
+    $('.utube i:nth-of-type(2)').on('click', function () {
         $('#myMovie').YTPPause();
-    })
-
-    // $(".product_slider").slick({
-    //     arrows: false,
-    //     slidesToShow: 5,
-    //     dots: true,
-    //     responsive: [
-    //         {
-    //             breakpoint: 768,
-    //             settings: {
-    //                 slidesToShow: 1,
-    //             }
-    //         }
-    //     ]
-    // });
-
-    // $(".product i.xi-arrow-left").on("click", function () {
-    //     $(".product_slider").slick("slickPrev");
-    // });
-    // $(".product i.xi-arrow-right").on("click", function () {
-    //     $(".product_slider").slick("slickNext");
-    // });
-
+    });
 
     $('.product_slider').slick({
         slidesToShow: 5,
@@ -80,9 +59,11 @@ $(function () {
         autoplay: true,
     });
 
+
     $('.product_list .s_left').on('click', function () {
         $('.product_slider').slick('slickPrev');
     });
+
 
     $('.product_list .s_right').on('click', function () {
         $('.product_slider').slick('slickNext');
@@ -98,5 +79,6 @@ $(function () {
         var lik = $(this).val();
         if (lik) window.open(lik)
     })
-    /////////////////////////////////////
+
+    /////////////////////////////////////////////////
 });
