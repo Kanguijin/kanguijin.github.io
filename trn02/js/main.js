@@ -78,6 +78,14 @@ $(function () {
         arrows: false,
         dots: true,
         autoplay: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+        ]
     });
 
     $('.product_list .s_left').on('click', function () {
@@ -97,6 +105,12 @@ $(function () {
     $('.footer #link').on('change', function () {
         var lik = $(this).val();
         if (lik) window.open(lik)
+    })
+
+
+    $('.hamburger').on('click', function () {
+        $('nav').toggleClass('on');
+        $(this).toggleClass('is-active')
     })
     /////////////////////////////////////
 });
